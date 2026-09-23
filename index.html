@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="tema-claro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- EDITE: título e descrição (aparecem na aba do navegador e no Google) -->
+  <title>Luiz Santana — Desenvolvedor de Sistemas</title>
+  <meta name="description" content="Portfólio de Seu Nome, desenvolvedor front-end. Sobre, stack, projetos e contato.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ======================= CABEÇALHO ======================= -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+
+      <a href="#topo" class="logo">
+        <span class="logo-dot"></span>
+        luiz-santana<span class="cursor">_</span>
+      </a>
+
+      <!-- id="nav" é usado pelo JS para abrir/fechar no celular -->
+      <nav class="nav" id="nav">
+        <a href="#sobre" class="nav-link">sobre</a>
+        <a href="#stack" class="nav-link">stack</a>
+        <a href="#projetos" class="nav-link">projetos</a>
+        <a href="#contato" class="nav-link">contato</a>
+        <button class="btn btn-primario" id="btnTema">Mudar tema</button>
+      </nav>
+
+      <!-- Botão hambúrguer, só aparece no celular (ver style.css) -->
+      <button class="menu-btn" id="menuBtn" type="button"
+              aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <main id="topo">
+
+    <!-- ======================= HERO / INTRO ======================= -->
+    <section class="hero">
+      <div class="container hero-inner">
+
+        <div class="hero-texto">
+          <p class="eyebrow">// olá, meu nome é</p>
+
+          <!-- EDITE: seu nome -->
+          <h1 class="hero-title">Luiz Santana</h1>
+
+          <p class="hero-cargo">Desenvolvedor de Sistemas<span class="cursor">_</span></p>
+
+          <!-- EDITE: uma ou duas frases sobre você -->
+          <p class="hero-desc">
+            Sou programador e estudante na area da tecnologia
+
+          </p>
+
+          <div class="hero-acoes">
+            <a href="#projetos" class="btn btn-primario">ver projetos</a>
+            <a href="#contato" class="btn btn-fantasma">falar comigo</a>
+          </div>
+        </div>
+
+        <!-- Cartão decorativo, parece um terminal mas é só texto fixo -->
+        <div class="terminal-card" aria-hidden="true">
+          <div class="terminal-topo">
+            <span class="dot dot-vermelho"></span>
+            <span class="dot dot-amarelo"></span>
+            <span class="dot dot-verde"></span>
+            <span class="terminal-titulo">sobre.sh</span>
+          </div>
+          <div class="terminal-corpo">
+            <p><span class="prompt">$</span> whoami</p>
+            <p class="saida">luiz — dev back-end/front-end</p>
+            <p><span class="prompt">$</span> cat status.txt</p>
+            <p class="saida"><span class="status-dot">●</span> aberto a oportunidades</p>
+            <p><span class="prompt">$</span> ls stack/</p>
+            <p class="saida">js git.sh java spring boot</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================= SOBRE ======================= -->
+    <section class="section reveal" id="sobre">
+      <div class="container">
+        <p class="section-tag">01</p>
+        <h2 class="section-title"># sobre</h2>
+
+        <div class="sobre-grid">
+          <!-- EDITE: seu texto sobre você -->
+          <div class="sobre-texto">
+            <p>
+              Comecei a programar quando iniciei o técnico em Desenvolvimento de Sistemas
+              a partir disso, tomei a programação como um passa-tempo, sempre construindo coisas com o que eu aprendo
+            </p>
+          </div>
+
+          <!-- EDITE: essas informações rápidas -->
+          <dl class="sobre-info">
+            <div class="info-item">
+              <dt>status</dt>
+              <dd>aberto a oportunidades e freelance</dd>
+            </div>
+            <div class="info-item">
+              <dt>base</dt>
+              <dd>Franco da Rocha, SP · remoto e presencial ok</dd>
+            </div>
+            <div class="info-item">
+              <dt>foco</dt>
+              <dd>Estágio ou júnior · back-end</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================= STACK ======================= -->
+    <section class="section section-alt reveal" id="stack">
+      <div class="container">
+        <p class="section-tag">02</p>
+        <h2 class="section-title"># stack</h2>
+
+        <!-- EDITE: adicione/remova <li> dentro de cada grupo -->
+        <div class="stack-grid">
+          <div class="stack-grupo">
+            <h3>linguagens</h3>
+            <ul class="tag-list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Java</li>
+              <li>Spring boot</li>
+              <li>SQL</li>
+              <li>C#</li>
+              <li>PHP</li>
+            </ul>
+          </div>
+
+          <div class="stack-grupo">
+            <h3>ferramentas</h3>
+            <ul class="tag-list">
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>VS Code</li>
+              <li>Linux</li>
+              <li>IntelliJ</li>
+              <li>DBeaver</li>
+              <li>Insomnia</li>
+              <li>Android Studio</li>
+            </ul>
+          </div>
+
+          <div class="stack-grupo">
+            <h3>conceitos</h3>
+            <ul class="tag-list">
+              <li>DOM</li>
+              <li>fetch / API</li>
+              <li>localStorage</li>
+              <li>Orientação a objetos</li>
+            </ul>
+          </div>
+
+          <div class="stack-grupo">
+            <h3>estudando agora</h3>
+            <ul class="tag-list tag-list-estudando">
+              <li>CSS avançado</li>
+              <li>Postgresql</li>
+              <li>Flexbox &amp; Grid</li>
+              <li>Acessibilidade</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================= PROJETOS ======================= -->
+    <section class="section reveal" id="projetos">
+      <div class="container">
+        <p class="section-tag">03</p>
+        <h2 class="section-title"># projetos</h2>
+
+        <!--
+          EDITE: cada projeto é um <article class="card-projeto">.
+          Copie um bloco inteiro pra criar um projeto novo, ou apague um bloco
+          pra remover. Se não tiver link de demo, apague a linha do link "ver no ar".
+        -->
+        <div class="projetos-grid">
+
+          <article class="card-projeto">
+            <div class="card-topo">
+              <span class="dot dot-vermelho"></span>
+              <span class="dot dot-amarelo"></span>
+              <span class="dot dot-verde"></span>
+              <span class="card-ano">2026</span>
+            </div>
+            <div class="card-corpo">
+              <h3>Quiz Linux</h3>
+              <p>Quiz sobre o linux feito no Android studio, feito para testar o conhecimento sobre Intents.</p>
+              <ul class="tag-list tag-list-pequena">
+                <li>Android Studio</li><li>Java</li><li>XML</li>
+              </ul>
+              <div class="card-links">
+                <a href="https://github.com/dev-luiz-santana/android-quiz" target="_blank" rel="noopener noreferrer">Ver no github ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card-projeto">
+            <div class="card-topo">
+              <span class="dot dot-vermelho"></span>
+              <span class="dot dot-amarelo"></span>
+              <span class="dot dot-verde"></span>
+              <span class="card-ano">2026</span>
+            </div>
+            <div class="card-corpo">
+              <h3>Encurtador de links</h3>
+              <p>Encurta uma url longa em um codigo aleatorio, gerencia quantas vezes foi acessado e guarda em um banco de dados</p>
+              <ul class="tag-list tag-list-pequena">
+                <li>Java</li><li>Spring boot</li><li>MySQL</li><li>API REST</li>
+              </ul>
+              <div class="card-links">
+                <a href="https://github.com/dev-luiz-santana/encurta-url" target="_blank" rel="noopener noreferrer">Ver no github ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card-projeto">
+            <div class="card-topo">
+              <span class="dot dot-vermelho"></span>
+              <span class="dot dot-amarelo"></span>
+              <span class="dot dot-verde"></span>
+              <span class="card-ano">2025</span>
+            </div>
+            <div class="card-corpo">
+              <h3>Jogo de Nave Windows</h3>
+              <p>Jogo de nave feito com WindowsForms, usando o .NET Framework e um banco de dados MySQL que salva o score do jogador.</p>
+              <ul class="tag-list tag-list-pequena">
+                <li>C#</li><li>.NET Framwork</li><li>MySQL</li>
+              </ul>
+              <div class="card-links">
+                <a href="https://github.com/dev-luiz-santana/jogo-windowsforms-db" target="_blank" rel="noopener noreferrer">Ver no github ↗</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================= CONTATO ======================= -->
+    <section class="section section-alt reveal" id="contato">
+      <div class="container contato-inner">
+        <p class="section-tag">04</p>
+        <h2 class="section-title"># contato</h2>
+        <p class="contato-desc">Tem uma vaga, projeto ou ideia? Bora conversar. Respondo em até 48h.</p>
+
+        <!-- EDITE: seus links -->
+        <div class="contato-grid">
+          <a class="contato-card" href="mailto:luizsantanarutka@gmail.com">
+            <span class="contato-label">email</span>
+            <span class="contato-valor">luizsantanarutka@gmail.com</span>
+          </a>
+          <a class="contato-card" href="https://github.com/dev-luiz-santana" target="_blank" rel="noopener noreferrer">
+            <span class="contato-label">github</span>
+            <span class="contato-valor">github.com/dev-luiz-santana</span>
+          </a>
+          <a class="contato-card" href="https://www.linkedin.com/in/dev-luiz-santana/" target="_blank" rel="noopener noreferrer">
+            <span class="contato-label">linkedin</span>
+            <span class="contato-valor">linkedin.com/in/dev-luiz-santana</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ======================= RODAPÉ ======================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <!-- #ano é preenchido pelo JS com o ano atual -->
+      <p>visitante@portfolio:~$ echo "© <span id="ano"></span> Luiz Fernando de Santana Rutka"</p>
+      <a href="#topo" class="voltar-topo">voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
