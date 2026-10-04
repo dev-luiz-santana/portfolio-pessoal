@@ -82,6 +82,20 @@ html {
   scroll-behavior: smooth;   /* clicar num link do menu rola suavemente */
 }
 
+/*
+  Transição de tema mais suave, só fica ativo no momento
+  da troca de tema.
+*/
+
+html.trocando-tema,
+html.trocando-tema *,
+html.trocando-tema *::before,
+html.trocando-tema *::after {
+  transition: background-color .35s ease,
+              color .35s ease,
+              border-color .35s ease !important;
+}
+
 body {
   margin: 0;
   background: var(--cor-fundo);
@@ -261,7 +275,8 @@ section[id] {
   padding: 4px 2px;
 }
 /* Sublinhado que cresce da esquerda pra direita ao passar o mouse,
-   ou fica sempre visível na seção ativa (classe adicionada pelo JS) */
+   ou fica sempre visível na seção ativa (classe adicionada pelo JS) 
+*/
 .nav-link::after {
   content: "";
   position: absolute;
@@ -597,6 +612,20 @@ section[id] {
    Do maior breakpoint para o menor: primeiro ajusta grids pra 2 colunas,
    depois esconde o menu e mostra o hambúrguer.
    -------------------------------------------------------------------------- */
+
+/*
+  media query para a transição de tema no mobile,
+  usa as mesmas classes mas reduz o movimento se o usuario preferir
+*/
+@media (prefers-reduced-motion: reduce) {
+  html.trocando-tema,
+  html.trocando-tema *,
+  html.trocando-tema *::before,
+  html.trocando-tema *::after {
+    transition: none !important;
+  }
+}
+
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; }
   .stack-grid { grid-template-columns: repeat(2, 1fr); }
