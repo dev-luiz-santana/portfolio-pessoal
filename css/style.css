@@ -24,7 +24,7 @@
    -------------------------------------------------------------------------- */
 :root, [data-theme="tema-escuro"] {
   /* Cores */
-  --cor-fundo:        #0a0a0f;   /* fundo da página, verde bem escuro */
+  --cor-fundo:         #0a0a0f;   /* fundo da página, verde bem escuro */
   --cor-fundo-alt:     #0d0d13;  /* fundo das seções "alternadas" (leve contraste) */
   --cor-superficie:    #101017;  /* fundo de cards */
   --cor-texto:         #b9d7ff;  /* texto principal */
@@ -35,7 +35,12 @@
 
   --cor-cabecalho:     rgba(11, 10, 15, 0.85);
 
+  /*Cor do cursor piscando*/
+  --cor-cursor:        #eaeaff;
+
+  /*Cor do botão principal*/
   --btn-hover: #eaeaff;
+  --btn-primario-font: #060711;
 
   /* Tipografia */
   --fonte-mono:  "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
@@ -58,7 +63,9 @@
   --cor-acento:        #5934e0;  /* a cor de destaque (azul/roxa) permanece igual */
   --cor-borda:         rgba(79, 52, 224, 0.12); /* borda sutil adaptada para fundos claros */
 
-  --btn-hover: #eaeaff;
+
+  --btn-hover:  #060711 ;
+  --btn-primario-font: #eaeaff;
 
   --cor-cabecalho:     rgba(234, 233, 238, 0.85);
 }
@@ -75,6 +82,20 @@
 
 html {
   scroll-behavior: smooth;   /* clicar num link do menu rola suavemente */
+}
+
+/*
+  Transição de tema mais suave, só fica ativo no momento
+  da troca de tema.
+*/
+
+html.trocando-tema,
+html.trocando-tema *,
+html.trocando-tema *::before,
+html.trocando-tema *::after {
+  transition: background-color .35s ease,
+              color .35s ease,
+              border-color .35s ease !important;
 }
 
 body {
@@ -149,7 +170,7 @@ section[id] {
 
 .btn-primario {
   background: var(--cor-acento);
-  color: #060711;
+  color: var(--btn-primario-font);
 }
 .btn-primario:hover { 
   background: var(--btn-hover); 
@@ -167,6 +188,7 @@ section[id] {
   width: .5em;
   margin-left: 2px;
   background: var(--cor-acento);
+  color: var(--cor-cursor);
   animation: piscar 1s steps(1) infinite;
 }
 @keyframes piscar {
@@ -255,7 +277,8 @@ section[id] {
   padding: 4px 2px;
 }
 /* Sublinhado que cresce da esquerda pra direita ao passar o mouse,
-   ou fica sempre visível na seção ativa (classe adicionada pelo JS) */
+   ou fica sempre visível na seção ativa (classe adicionada pelo JS) 
+*/
 .nav-link::after {
   content: "";
   position: absolute;
@@ -591,6 +614,20 @@ section[id] {
    Do maior breakpoint para o menor: primeiro ajusta grids pra 2 colunas,
    depois esconde o menu e mostra o hambúrguer.
    -------------------------------------------------------------------------- */
+
+/*
+  media query para a transição de tema no mobile,
+  usa as mesmas classes mas reduz o movimento se o usuario preferir
+*/
+@media (prefers-reduced-motion: reduce) {
+  html.trocando-tema,
+  html.trocando-tema *,
+  html.trocando-tema *::before,
+  html.trocando-tema *::after {
+    transition: none !important;
+  }
+}
+
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; }
   .stack-grid { grid-template-columns: repeat(2, 1fr); }

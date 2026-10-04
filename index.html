@@ -6,17 +6,20 @@
 
   <!-- EDITE: título e descrição (aparecem na aba do navegador e no Google) -->
   <title>Luiz Santana — Desenvolvedor de Sistemas</title>
-  <meta name="description" content="Portfólio de Seu Nome, desenvolvedor front-end. Sobre, stack, projetos e contato.">
+  <meta name="description" content="Portfólio de Luiz Santana, desenvolvedor front-end e back-end. Sobre mim, minha stack, meus projetos e contato.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 
+<!--
+-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/tema.js"></script>
 </head>
 <body>
 
@@ -62,15 +65,13 @@
 
           <p class="hero-cargo">Desenvolvedor de Sistemas<span class="cursor">_</span></p>
 
-          <!-- EDITE: uma ou duas frases sobre você -->
           <p class="hero-desc">
-            Sou programador e estudante na area da tecnologia
-
+            Sou programador e estudante na área da programação e linux, atualmente buscando estágio.
           </p>
 
           <div class="hero-acoes">
-            <a href="#projetos" class="btn btn-primario">ver projetos</a>
-            <a href="#contato" class="btn btn-fantasma">falar comigo</a>
+            <a href="#projetos" class="btn btn-primario">Ver projetos</a>
+            <a href="#contato" class="btn btn-fantasma">Falar comigo</a>
           </div>
         </div>
 
@@ -88,7 +89,7 @@
             <p><span class="prompt">$</span> cat status.txt</p>
             <p class="saida"><span class="status-dot">●</span> aberto a oportunidades</p>
             <p><span class="prompt">$</span> ls stack/</p>
-            <p class="saida">js git.sh java spring boot</p>
+            <p class="saida">JavaScript, git, Java e Spring Boot</p>
           </div>
         </div>
 
@@ -103,23 +104,22 @@
         <h2 class="section-title"># sobre</h2>
 
         <div class="sobre-grid">
-          <!-- EDITE: seu texto sobre você -->
           <div class="sobre-texto">
             <p>
-              Comecei a programar quando iniciei o técnico em Desenvolvimento de Sistemas
-              a partir disso, tomei a programação como um passa-tempo, sempre construindo coisas com o que eu aprendo
+              Meu nome é Luiz Fernando de Santana Rutka, sou estudante e desenvolvedor com foco nas linguagens Java e C#.<br/>
+              Comecei a programar quando iniciei o técnico em Desenvolvimento de Sistemas.
+              A partir disso, passei a ver a programação como um passatempo, sempre construindo coisas com o que eu aprendo.
             </p>
           </div>
 
-          <!-- EDITE: essas informações rápidas -->
           <dl class="sobre-info">
             <div class="info-item">
               <dt>status</dt>
-              <dd>aberto a oportunidades e freelance</dd>
+              <dd>aberto a oportunidades e freelances</dd>
             </div>
             <div class="info-item">
               <dt>base</dt>
-              <dd>Franco da Rocha, SP · remoto e presencial ok</dd>
+              <dd>Franco da Rocha, SP · remoto e presencial</dd>
             </div>
             <div class="info-item">
               <dt>foco</dt>
@@ -137,7 +137,6 @@
         <p class="section-tag">02</p>
         <h2 class="section-title"># stack</h2>
 
-        <!-- EDITE: adicione/remova <li> dentro de cada grupo -->
         <div class="stack-grid">
           <div class="stack-grupo">
             <h3>linguagens</h3>
@@ -146,7 +145,7 @@
               <li>CSS</li>
               <li>JavaScript</li>
               <li>Java</li>
-              <li>Spring boot</li>
+              <li>Spring Boot</li>
               <li>SQL</li>
               <li>C#</li>
               <li>PHP</li>
@@ -159,7 +158,7 @@
               <li>Git</li>
               <li>GitHub</li>
               <li>VS Code</li>
-              <li>Linux</li>
+              <li>Linux CLI</li>
               <li>IntelliJ</li>
               <li>DBeaver</li>
               <li>Insomnia</li>
@@ -181,7 +180,7 @@
             <h3>estudando agora</h3>
             <ul class="tag-list tag-list-estudando">
               <li>CSS avançado</li>
-              <li>Postgresql</li>
+              <li>PostgreSQL</li>
               <li>Flexbox &amp; Grid</li>
               <li>Acessibilidade</li>
             </ul>
@@ -198,9 +197,7 @@
         <h2 class="section-title"># projetos</h2>
 
         <!--
-          EDITE: cada projeto é um <article class="card-projeto">.
-          Copie um bloco inteiro pra criar um projeto novo, ou apague um bloco
-          pra remover. Se não tiver link de demo, apague a linha do link "ver no ar".
+          cada projeto é um <article class="card-projeto">.
         -->
         <div class="projetos-grid">
 
@@ -213,12 +210,12 @@
             </div>
             <div class="card-corpo">
               <h3>Quiz Linux</h3>
-              <p>Quiz sobre o linux feito no Android studio, feito para testar o conhecimento sobre Intents.</p>
+              <p>Quiz sobre o linux, feito no Android studio, feito para testar o conhecimento sobre Intents.</p>
               <ul class="tag-list tag-list-pequena">
                 <li>Android Studio</li><li>Java</li><li>XML</li>
               </ul>
               <div class="card-links">
-                <a href="https://github.com/dev-luiz-santana/android-quiz" target="_blank" rel="noopener noreferrer">Ver no github ↗</a>
+                <a href="https://github.com/dev-luiz-santana/android-quiz" target="_blank" rel="noopener noreferrer">Ver no Github ↗</a>
               </div>
             </div>
           </article>
@@ -232,12 +229,12 @@
             </div>
             <div class="card-corpo">
               <h3>Encurtador de links</h3>
-              <p>Encurta uma url longa em um codigo aleatorio, gerencia quantas vezes foi acessado e guarda em um banco de dados</p>
+              <p>Encurta uma URL longa em um código aleatorio, gerencia quantas vezes foi acessado e guarda em um banco de dados</p>
               <ul class="tag-list tag-list-pequena">
                 <li>Java</li><li>Spring boot</li><li>MySQL</li><li>API REST</li>
               </ul>
               <div class="card-links">
-                <a href="https://github.com/dev-luiz-santana/encurta-url" target="_blank" rel="noopener noreferrer">Ver no github ↗</a>
+                <a href="https://github.com/dev-luiz-santana/encurta-url" target="_blank" rel="noopener noreferrer">Ver no Github ↗</a>
               </div>
             </div>
           </article>
@@ -251,12 +248,12 @@
             </div>
             <div class="card-corpo">
               <h3>Jogo de Nave Windows</h3>
-              <p>Jogo de nave feito com WindowsForms, usando o .NET Framework e um banco de dados MySQL que salva o score do jogador.</p>
+              <p>Jogo de nave feito com Windows Forms, usando o .NET Framework e um banco de dados MySQL que salva o score do jogador.</p>
               <ul class="tag-list tag-list-pequena">
-                <li>C#</li><li>.NET Framwork</li><li>MySQL</li>
+                <li>C#</li><li>.NET Framework</li><li>MySQL</li>
               </ul>
               <div class="card-links">
-                <a href="https://github.com/dev-luiz-santana/jogo-windowsforms-db" target="_blank" rel="noopener noreferrer">Ver no github ↗</a>
+                <a href="https://github.com/dev-luiz-santana/jogo-windowsforms-db" target="_blank" rel="noopener noreferrer">Ver no Github ↗</a>
               </div>
             </div>
           </article>
@@ -271,9 +268,9 @@
       <div class="container contato-inner">
         <p class="section-tag">04</p>
         <h2 class="section-title"># contato</h2>
-        <p class="contato-desc">Tem uma vaga, projeto ou ideia? Bora conversar. Respondo em até 48h.</p>
+        <p class="contato-desc">Tem uma vaga, projeto ou ideia? Entre em contato comigo</p>
 
-        <!-- EDITE: seus links -->
+        <!-- Meus links -->
         <div class="contato-grid">
           <a class="contato-card" href="mailto:luizsantanarutka@gmail.com">
             <span class="contato-label">email</span>

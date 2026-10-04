@@ -96,20 +96,34 @@ const observadorReveal = new IntersectionObserver(
 elementosReveal.forEach((el) => observadorReveal.observe(el));
 
 
-let btnTema = document.querySelector("#btnTema");
-let htmlTag = document.querySelector("html");
+/**
+ * evento para salvar o ultimo tema que o usuario escolheu
+ * 
+ * se na primeira vez que entrou, ele muda para o 
+ * tema escuro, na proxima vez que entrar ele 
+ * já vai entrar com o tema escuro ativado ao inves do
+ * tema branco padrão, isso se ele não apagar o localStorage até lá
+ */
+const btnTema = document.querySelector("#btnTema");
+const htmlTag = document.documentElement;
 
 btnTema.addEventListener("click", function(event){
+
   const temaAtual = htmlTag.getAttribute('data-theme');
+  const novoTema = temaAtual === "tema-escuro" ? "tema-claro" : "tema-escuro";
 
-  if(temaAtual == "tema-escuro"){
-    htmlTag.setAttribute('data-theme','tema-claro');
-  }else{
-    htmlTag.setAttribute('data-theme','tema-escuro');
-  }
+  htmlTag.classList.add("trocando-tema");
 
+  htmlTag.setAttribute("data-theme",novoTema);
+
+  try{
+    localStorage.setItem("tema",novoTema);
+  }catch(e){}
+
+  setTimeout(function(){
+    htmlTag.classList.remove("trocando-tema");
+  }, 400);
 });
-
 
 /* --------------------------------------------------------------------------
    4. ANO DO RODAPÉ
