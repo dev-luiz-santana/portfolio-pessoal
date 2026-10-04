@@ -35,7 +35,9 @@
 
   --cor-cabecalho:     rgba(11, 10, 15, 0.85);
 
+  /*Cor do botão principal*/
   --btn-hover: #eaeaff;
+  --btn-primario-font: #060711;
 
   /* Tipografia */
   --fonte-mono:  "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
@@ -58,7 +60,10 @@
   --cor-acento:        #5934e0;  /* a cor de destaque (azul/roxa) permanece igual */
   --cor-borda:         rgba(79, 52, 224, 0.12); /* borda sutil adaptada para fundos claros */
 
-  --btn-hover: #eaeaff;
+  --cor-cursor:         #eaeaff;
+
+  --btn-hover:  #060711 ;
+  --btn-primario-font: #eaeaff;
 
   --cor-cabecalho:     rgba(234, 233, 238, 0.85);
 }
@@ -149,7 +154,7 @@ section[id] {
 
 .btn-primario {
   background: var(--cor-acento);
-  color: #060711;
+  color: var(--btn-primario-font);
 }
 .btn-primario:hover { 
   background: var(--btn-hover); 
@@ -167,6 +172,7 @@ section[id] {
   width: .5em;
   margin-left: 2px;
   background: var(--cor-acento);
+  color: var(--cor-cursor);
   animation: piscar 1s steps(1) infinite;
 }
 @keyframes piscar {
