@@ -24,7 +24,7 @@
    -------------------------------------------------------------------------- */
 :root, [data-theme="tema-escuro"] {
   /* Cores */
-  --cor-fundo:        #0a0a0f;   /* fundo da página, verde bem escuro */
+  --cor-fundo:         #0a0a0f;   /* fundo da página, verde bem escuro */
   --cor-fundo-alt:     #0d0d13;  /* fundo das seções "alternadas" (leve contraste) */
   --cor-superficie:    #101017;  /* fundo de cards */
   --cor-texto:         #b9d7ff;  /* texto principal */
@@ -34,6 +34,9 @@
   --cor-borda:         rgba(78, 52, 224, 0.18);
 
   --cor-cabecalho:     rgba(11, 10, 15, 0.85);
+
+  /*Cor do cursor piscando*/
+  --cor-cursor:        #eaeaff;
 
   /*Cor do botão principal*/
   --btn-hover: #eaeaff;
@@ -60,7 +63,6 @@
   --cor-acento:        #5934e0;  /* a cor de destaque (azul/roxa) permanece igual */
   --cor-borda:         rgba(79, 52, 224, 0.12); /* borda sutil adaptada para fundos claros */
 
-  --cor-cursor:         #eaeaff;
 
   --btn-hover:  #060711 ;
   --btn-primario-font: #eaeaff;
