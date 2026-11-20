@@ -608,7 +608,8 @@ section[id] {
   height: 80%;
   background-color: var(--cor-fundo-alt);
   border-radius: 15px;
-  border-color: var(--cor-texto-forte);
+  border-color: var(--cor-borda);
+  box-shadow: 0 4px 12px var(--cor-borda);
 }
 
 .modal-conteudo{
