@@ -39,7 +39,6 @@ nav.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => alternarMenu(true));
 });
 
-
 /* --------------------------------------------------------------------------
    2. LINK ATIVO NO MENU CONFORME A ROLAGEM
    IntersectionObserver "observa" um elemento e avisa quando ele entra ou
@@ -107,20 +106,20 @@ elementosReveal.forEach((el) => observadorReveal.observe(el));
 const btnTema = document.querySelector("#btnTema");
 const htmlTag = document.documentElement;
 
-btnTema.addEventListener("click", function(event){
+btnTema.addEventListener("click", function (event) {
 
   const temaAtual = htmlTag.getAttribute('data-theme');
   const novoTema = temaAtual === "tema-escuro" ? "tema-claro" : "tema-escuro";
 
   htmlTag.classList.add("trocando-tema");
 
-  htmlTag.setAttribute("data-theme",novoTema);
+  htmlTag.setAttribute("data-theme", novoTema);
 
-  try{
-    localStorage.setItem("tema",novoTema);
-  }catch(e){}
+  try {
+    localStorage.setItem("tema", novoTema);
+  } catch (e) { }
 
-  setTimeout(function(){
+  setTimeout(function () {
     htmlTag.classList.remove("trocando-tema");
   }, 400);
 });
@@ -131,3 +130,25 @@ btnTema.addEventListener("click", function(event){
    atualizar o "© 2026" manualmente ano que vem.
    -------------------------------------------------------------------------- */
 document.getElementById("ano").textContent = new Date().getFullYear();
+
+const modal = document.getElementById('modalCurriculo');
+const verModal = document.getElementById('btnCurriculo');
+const btnFechar = document.getElementById('btnFecharModal');
+const btnBaixar = document.getElementById('btnBaixar');
+
+verModal.addEventListener('click', () => modal.showModal());
+btnFechar.addEventListener('click', () => modal.close());
+
+btnBaixar.addEventListener('click', () => {
+  const link = document.createElement('a');
+  link.href = "assets/Curriculo Luiz Fernando de Santana Rutka.pdf";
+  link.download = "Curriculo-Luiz-Santana.pdf";
+  link.click();
+});
+
+modal.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    modal.close();
+  }
+
+});

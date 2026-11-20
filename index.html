@@ -11,12 +11,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-
-<!--
--->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="css/style.css">
   <script src="js/tema.js"></script>
@@ -66,11 +64,11 @@
           <p class="hero-cargo">Desenvolvedor de Sistemas<span class="cursor">_</span></p>
 
           <p class="hero-desc">
-            Sou programador e estudante na área da programação e linux, atualmente buscando estágio.
+            Sou programador e estudante na área da programação, atualmente buscando estágio.
           </p>
 
           <div class="hero-acoes">
-            <a href="#projetos" class="btn btn-primario">Ver projetos</a>
+            <a id="btnCurriculo" class="btn btn-primario">Ver meu curriculo</a>
             <a href="#contato" class="btn btn-fantasma">Falar comigo</a>
           </div>
         </div>
@@ -107,8 +105,8 @@
           <div class="sobre-texto">
             <p>
               Meu nome é Luiz Fernando de Santana Rutka, sou estudante e desenvolvedor com foco nas linguagens Java e C#.<br/>
-              Comecei a programar quando iniciei o técnico em Desenvolvimento de Sistemas.
-              A partir disso, passei a ver a programação como um passatempo, sempre construindo coisas com o que eu aprendo.
+              Comecei a programar quando iniciei o técnico em Desenvolvimento de Sistemas, desde então, passei a enxergar a programação também como um hobby, sempre construindo coisas com o que eu aprendo.<br/>
+              Além da programação, tenho interesse por linux, hardware e eletronica.
             </p>
           </div>
 
@@ -119,7 +117,7 @@
             </div>
             <div class="info-item">
               <dt>base</dt>
-              <dd>Franco da Rocha, SP · remoto e presencial</dd>
+              <dd>Franco da Rocha, SP · remoto ou presencial</dd>
             </div>
             <div class="info-item">
               <dt>foco</dt>
@@ -145,10 +143,10 @@
               <li>CSS</li>
               <li>JavaScript</li>
               <li>Java</li>
-              <li>Spring Boot</li>
               <li>SQL</li>
               <li>C#</li>
               <li>PHP</li>
+              <li>C/C++</li>
             </ul>
           </div>
 
@@ -159,10 +157,13 @@
               <li>GitHub</li>
               <li>VS Code</li>
               <li>Linux CLI</li>
+              <li>Arch Linux</li>
               <li>IntelliJ</li>
               <li>DBeaver</li>
               <li>Insomnia</li>
               <li>Android Studio</li>
+              <li>Arduino</li>
+              <li>Spring Boot</li>
             </ul>
           </div>
 
@@ -179,10 +180,10 @@
           <div class="stack-grupo">
             <h3>estudando agora</h3>
             <ul class="tag-list tag-list-estudando">
-              <li>CSS avançado</li>
+              <li>CSS Avançado</li>
               <li>PostgreSQL</li>
-              <li>Flexbox &amp; Grid</li>
               <li>Acessibilidade</li>
+              <li>React.Js</li>
             </ul>
           </div>
         </div>
@@ -299,6 +300,14 @@
       <a href="#topo" class="voltar-topo">voltar ao topo ↑</a>
     </div>
   </footer>
+
+  <dialog class="modal-curriculo" id="modalCurriculo">
+    <div class="modal-conteudo">
+      <iframe class="iframe-curriculo" src="assets/Curriculo Luiz Fernando de Santana Rutka.pdf" frameborder="0"></iframe><br>
+      <button class="btn btn-primario" id="btnBaixar">Baixar copia</button>
+      <button class="btn btn-primario" id="btnFecharModal">Fechar</button>
+    </div>
+  </dialog>
 
   <script src="js/script.js"></script>
 </body>
