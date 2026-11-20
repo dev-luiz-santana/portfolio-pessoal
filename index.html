@@ -11,9 +11,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-
-<!--
--->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
@@ -70,7 +67,7 @@
           </p>
 
           <div class="hero-acoes">
-            <a href="#projetos" class="btn btn-primario">Ver projetos</a>
+            <a id="btnCurriculo" class="btn btn-primario">Ver meu curriculo</a>
             <a href="#contato" class="btn btn-fantasma">Falar comigo</a>
           </div>
         </div>
@@ -149,6 +146,7 @@
               <li>SQL</li>
               <li>C#</li>
               <li>PHP</li>
+              <li>C/C++</li>
             </ul>
           </div>
 
@@ -163,6 +161,7 @@
               <li>DBeaver</li>
               <li>Insomnia</li>
               <li>Android Studio</li>
+              <li>Arduino</li>
             </ul>
           </div>
 
@@ -299,6 +298,14 @@
       <a href="#topo" class="voltar-topo">voltar ao topo ↑</a>
     </div>
   </footer>
+
+  <dialog class="modal-curriculo" id="modalCurriculo">
+    <div class="modal-conteudo">
+      <iframe class="iframe-curriculo" src="assets/Curriculo Luiz Fernando de Santana Rutka.pdf" frameborder="0"></iframe><br>
+      <button class="btn btn-primario" id="btnBaixar">Baixar copia</button>
+      <button class="btn btn-primario" id="btnFecharModal">Fechar</button>
+    </div>
+  </dialog>
 
   <script src="js/script.js"></script>
 </body>
