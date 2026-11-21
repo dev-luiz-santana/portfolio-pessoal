@@ -131,6 +131,8 @@ btnTema.addEventListener("click", function (event) {
    -------------------------------------------------------------------------- */
 document.getElementById("ano").textContent = new Date().getFullYear();
 
+/* codigo do modal */
+
 const modal = document.getElementById('modalCurriculo');
 const verModal = document.getElementById('btnCurriculo');
 const btnFechar = document.getElementById('btnFecharModal');
